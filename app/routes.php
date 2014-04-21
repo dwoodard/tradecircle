@@ -11,7 +11,7 @@
 |
 */
 
-/*Install*/
+/*Install / Homepage*/
 Route::get('/', array('as' => 'home', function(){
 	if(file_exists(base_path() . '/app/config/database.php')) {
 		return View::make('home');
@@ -21,9 +21,6 @@ Route::get('/', array('as' => 'home', function(){
 	}
 }));
 
-Route::get('/install', array( 'as' => 'install', function() {
-	echo "<a href='/install/index.php'>Install Me!</a>";
-}));
 
 //Run Laravel Commands after Setup
 Route::post('/app/install', array( 'as' => 'app/install', function() {
